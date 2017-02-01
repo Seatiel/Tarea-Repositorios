@@ -68,18 +68,19 @@ namespace TareaRegistros.UI.Registros
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            var usuario = new Usuarios();
-            if (!Validar())
-            {
-                MessageBox.Show("Debe llenar los Campos vacios");
-            }
+            var usuario = new Usuarios();            
             usuario = LlenarCampos();
             if (ClavetextBox.Text == ConfirmarClavetextBox.Text)
             {
-                if (UsuariosBLL.Guardar(usuario))
+                if (!Validar())
+                {
+                    MessageBox.Show("Debe llenar los Campos vacios");
+                }
+                else
+                if(UsuariosBLL.Guardar(usuario))
                 {
                     MessageBox.Show("El usuario ha sido Guardado.");
-                }
+                }                
             }
             else
             {
@@ -98,7 +99,7 @@ namespace TareaRegistros.UI.Registros
             Limpiar();
         }
 
-        private void Buscaarbutton_Click(object sender, EventArgs e)
+        private void Buscarbutton_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(UsuarioIdtextBox.Text);
             var usuario = UsuariosBLL.Buscar(id);

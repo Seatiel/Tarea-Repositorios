@@ -11,5 +11,20 @@ namespace TareaRegistros.Entidades
         [Key]
         public int CategoriaId { get; set; }
         public string Categoria { get; set; }
+
+        public Categorias()
+        {
+
+        }
+        public Categorias(string categoria)
+        {
+            this.Categoria = categoria;
+        }
+
+        public Categorias(int categoriaId, string categoria)
+        {
+            this.CategoriaId = categoriaId;
+            this.Categoria = categoria;
+        }
     }
 }

@@ -58,15 +58,16 @@ namespace TareaRegistros.UI.Registros
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             var categoria = new Categorias();
+            categoria = LlenarCampos();
             if (!Validar())
             {
                 MessageBox.Show("Debe de completar los Campos.");
             }
-            else            
-            {
-                LlenarCampos();
+            else if (CategoriasBLL.Guardar(categoria))
+            {                
                 MessageBox.Show("Se ha guardado la Categoria.");
             }
+            Limpiar();                               
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
@@ -93,5 +94,7 @@ namespace TareaRegistros.UI.Registros
                 MessageBox.Show("La categoria no esta creado");
             }
         }
+
+
     }
 }

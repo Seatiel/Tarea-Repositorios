@@ -13,11 +13,8 @@ namespace TareaRegistros.DAL
         {
 
         }
-
         public DbSet<Usuarios> Usuario { get; set; }
         public DbSet<Peliculas> Pelicula { get; set; }
         public DbSet<Categorias> Categoria { get; set; }
-
-
     }
 }

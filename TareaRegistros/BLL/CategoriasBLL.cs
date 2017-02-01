@@ -23,7 +23,6 @@ namespace TareaRegistros.BLL
                 }
                 catch (Exception)
                 {
-
                     throw;
                 }
                 return retorno;
@@ -60,11 +59,37 @@ namespace TareaRegistros.BLL
                 }
                 catch (Exception)
                 {
-
                     throw;
                 }
                 return categoria;
             }
         }
+
+        public static List<Categorias> GetList()
+        {
+            List<Categorias> lista = new List<Categorias>();
+            using (var db = new RegistrosDb())
+            {
+                try
+                {
+                    if (db.Categoria.ToList().Count > 0)
+                    {
+                        lista = db.Categoria.ToList();
+                    }
+                    else
+                    {
+                        lista = null;
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                return lista;
+            }
+        }
+
+
     }
 }

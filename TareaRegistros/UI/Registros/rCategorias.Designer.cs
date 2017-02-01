@@ -38,9 +38,7 @@
             this.CategoriatextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CategoriaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.CategoriaIderrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.CategoriaerrorProvider)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CategoriaIderrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // CategoriaIdtextBox
@@ -77,7 +75,7 @@
             this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminarbutton.Location = new System.Drawing.Point(409, 270);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(85, 31);
+            this.Eliminarbutton.Size = new System.Drawing.Size(94, 31);
             this.Eliminarbutton.TabIndex = 4;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
@@ -88,7 +86,7 @@
             this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.Location = new System.Drawing.Point(275, 270);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(85, 31);
+            this.Guardarbutton.Size = new System.Drawing.Size(94, 31);
             this.Guardarbutton.TabIndex = 3;
             this.Guardarbutton.Text = "Guardar";
             this.Guardarbutton.UseVisualStyleBackColor = true;
@@ -99,7 +97,7 @@
             this.Nuevobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevobutton.Location = new System.Drawing.Point(142, 270);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(85, 31);
+            this.Nuevobutton.Size = new System.Drawing.Size(94, 31);
             this.Nuevobutton.TabIndex = 2;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
@@ -127,10 +125,6 @@
             // 
             this.CategoriaerrorProvider.ContainerControl = this;
             // 
-            // CategoriaIderrorProvider
-            // 
-            this.CategoriaIderrorProvider.ContainerControl = this;
-            // 
             // rCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -147,7 +141,6 @@
             this.Name = "rCategorias";
             this.Text = "Registro de Categorias";
             ((System.ComponentModel.ISupportInitialize)(this.CategoriaerrorProvider)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CategoriaIderrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,6 +157,5 @@
         private System.Windows.Forms.TextBox CategoriatextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ErrorProvider CategoriaerrorProvider;
-        private System.Windows.Forms.ErrorProvider CategoriaIderrorProvider;
     }
 }

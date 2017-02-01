@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.Buscaarbutton = new System.Windows.Forms.Button();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Nuevobutton = new System.Windows.Forms.Button();
@@ -49,16 +49,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.ConfirmarClaveerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // Buscaarbutton
+            // Buscarbutton
             // 
-            this.Buscaarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscaarbutton.Location = new System.Drawing.Point(464, 77);
-            this.Buscaarbutton.Name = "Buscaarbutton";
-            this.Buscaarbutton.Size = new System.Drawing.Size(97, 40);
-            this.Buscaarbutton.TabIndex = 7;
-            this.Buscaarbutton.Text = "Buscar";
-            this.Buscaarbutton.UseVisualStyleBackColor = true;
-            this.Buscaarbutton.Click += new System.EventHandler(this.Buscaarbutton_Click);
+            this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarbutton.Location = new System.Drawing.Point(464, 77);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(97, 40);
+            this.Buscarbutton.TabIndex = 7;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // Guardarbutton
             // 
@@ -182,7 +182,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(665, 470);
-            this.Controls.Add(this.Buscaarbutton);
+            this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.Guardarbutton);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Nuevobutton);
@@ -206,7 +206,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Buscaarbutton;
+        private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Guardarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.Button Nuevobutton;
