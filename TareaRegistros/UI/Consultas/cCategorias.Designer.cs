@@ -37,16 +37,16 @@
             // 
             this.CategoriasdataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CategoriasdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CategoriasdataGridView.Location = new System.Drawing.Point(58, 159);
+            this.CategoriasdataGridView.Location = new System.Drawing.Point(60, 143);
             this.CategoriasdataGridView.Name = "CategoriasdataGridView";
             this.CategoriasdataGridView.RowTemplate.Height = 24;
-            this.CategoriasdataGridView.Size = new System.Drawing.Size(728, 225);
+            this.CategoriasdataGridView.Size = new System.Drawing.Size(730, 225);
             this.CategoriasdataGridView.TabIndex = 7;
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Buscarbutton.Location = new System.Drawing.Point(712, 90);
+            this.Buscarbutton.Location = new System.Drawing.Point(716, 86);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(74, 37);
             this.Buscarbutton.TabIndex = 6;
@@ -58,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 471);
+            this.ClientSize = new System.Drawing.Size(850, 391);
             this.Controls.Add(this.CategoriasdataGridView);
             this.Controls.Add(this.Buscarbutton);
             this.Name = "cCategorias";
