@@ -76,11 +76,12 @@ namespace TareaRegistros.UI.Registros
                 {
                     MessageBox.Show("Debe llenar los Campos vacios");
                 }
-                else
+                else 
                 if(UsuariosBLL.Guardar(usuario))
                 {
                     MessageBox.Show("El usuario ha sido Guardado.");
-                }                
+                }
+                Limpiar();                
             }
             else
             {
