@@ -51,7 +51,7 @@ namespace TareaRegistros.UI.Registros
             EstrenostextBox.Text = pelicula.Estrenos;
             DescripciontextBox.Text = pelicula.Descripcion;            
             FechadateTimePicker.Value = pelicula.Fecha;
-            CategoriascomboBox.SelectedValue = pelicula.Categorias;
+            CategoriascomboBox.Text = pelicula.Categorias;            
         }
 
         public void Limpiar()

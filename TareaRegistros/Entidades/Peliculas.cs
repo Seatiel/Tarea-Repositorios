@@ -13,6 +13,6 @@ namespace TareaRegistros.Entidades
         public string Estrenos { get; set; }
         public string Descripcion { get; set; }
         public string Categorias { get; set; }
-        public DateTime Fecha { get; set; }
+        public DateTime Fecha { get; set; }                       
     }
 }
