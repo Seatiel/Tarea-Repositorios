@@ -28,48 +28,104 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.PeliculasdataGridView = new System.Windows.Forms.DataGridView();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            ((System.ComponentModel.ISupportInitialize)(this.PeliculasdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // PeliculasdataGridView
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(92, 146);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(686, 225);
-            this.dataGridView1.TabIndex = 5;
+            this.PeliculasdataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.PeliculasdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.PeliculasdataGridView.Location = new System.Drawing.Point(85, 175);
+            this.PeliculasdataGridView.Name = "PeliculasdataGridView";
+            this.PeliculasdataGridView.RowTemplate.Height = 24;
+            this.PeliculasdataGridView.Size = new System.Drawing.Size(684, 225);
+            this.PeliculasdataGridView.TabIndex = 5;
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Buscarbutton.Location = new System.Drawing.Point(704, 73);
+            this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarbutton.Location = new System.Drawing.Point(539, 99);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(74, 37);
+            this.Buscarbutton.Size = new System.Drawing.Size(84, 38);
             this.Buscarbutton.TabIndex = 4;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(107, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Desde:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(309, 117);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 20);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Hasta:";
+            // 
+            // DesdedateTimePicker
+            // 
+            this.DesdedateTimePicker.AccessibleDescription = "";
+            this.DesdedateTimePicker.CustomFormat = "yyyy/MM/dd";
+            this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DesdedateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.DesdedateTimePicker.Location = new System.Drawing.Point(176, 115);
+            this.DesdedateTimePicker.Name = "DesdedateTimePicker";
+            this.DesdedateTimePicker.Size = new System.Drawing.Size(115, 22);
+            this.DesdedateTimePicker.TabIndex = 12;
+            // 
+            // HastadateTimePicker
+            // 
+            this.HastadateTimePicker.AccessibleDescription = "";
+            this.HastadateTimePicker.CustomFormat = "yyyy/MM/dd";
+            this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.HastadateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.HastadateTimePicker.Location = new System.Drawing.Point(374, 115);
+            this.HastadateTimePicker.Name = "HastadateTimePicker";
+            this.HastadateTimePicker.Size = new System.Drawing.Size(115, 22);
+            this.HastadateTimePicker.TabIndex = 13;
             // 
             // cPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(906, 445);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(867, 445);
+            this.Controls.Add(this.HastadateTimePicker);
+            this.Controls.Add(this.DesdedateTimePicker);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.PeliculasdataGridView);
             this.Controls.Add(this.Buscarbutton);
             this.Name = "cPeliculas";
             this.Text = "cPeliculas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PeliculasdataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView PeliculasdataGridView;
         private System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker DesdedateTimePicker;
+        private System.Windows.Forms.DateTimePicker HastadateTimePicker;
     }
 }

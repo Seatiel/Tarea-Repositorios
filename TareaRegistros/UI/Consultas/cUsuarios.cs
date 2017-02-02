@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using TareaRegistros.BLL;
 
 namespace TareaRegistros.UI.Consultas
 {
@@ -18,7 +19,7 @@ namespace TareaRegistros.UI.Consultas
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-
+            cUsuariodataGridView.DataSource = UsuariosBLL.GetList();
         }
     }
 }

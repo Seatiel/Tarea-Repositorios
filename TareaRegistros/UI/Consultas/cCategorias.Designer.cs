@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.CategoriasdataGridView = new System.Windows.Forms.DataGridView();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoriasdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // CategoriasdataGridView
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(58, 159);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(728, 225);
-            this.dataGridView1.TabIndex = 7;
+            this.CategoriasdataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.CategoriasdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CategoriasdataGridView.Location = new System.Drawing.Point(58, 159);
+            this.CategoriasdataGridView.Name = "CategoriasdataGridView";
+            this.CategoriasdataGridView.RowTemplate.Height = 24;
+            this.CategoriasdataGridView.Size = new System.Drawing.Size(728, 225);
+            this.CategoriasdataGridView.TabIndex = 7;
             // 
             // Buscarbutton
             // 
@@ -52,24 +52,25 @@
             this.Buscarbutton.TabIndex = 6;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // cCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(848, 471);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.CategoriasdataGridView);
             this.Controls.Add(this.Buscarbutton);
             this.Name = "cCategorias";
             this.Text = "cCategorias";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CategoriasdataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView CategoriasdataGridView;
         private System.Windows.Forms.Button Buscarbutton;
     }
 }

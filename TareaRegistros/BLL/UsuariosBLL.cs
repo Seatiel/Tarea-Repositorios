@@ -87,6 +87,30 @@ namespace TareaRegistros.BLL
             }
         }
 
+        public static List<Usuarios> GetList()
+        {
+            List<Usuarios> lista = new List<Usuarios>();
+            using (var db = new RegistrosDb())
+            {
+                try
+                {
+                    if (db.Usuario.ToList().Count > 0)
+                    {
+                        lista = db.Usuario.ToList();
+                    }
+                    else
+                    {
+                        lista = null;
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                return lista;
+            }
+        }
 
     }
 }

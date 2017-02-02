@@ -99,6 +99,7 @@
             this.Nuevobutton.TabIndex = 4;
             this.Nuevobutton.Text = "Nuevo";
             this.Nuevobutton.UseVisualStyleBackColor = true;
+            this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
             // EstrenostextBox
             // 

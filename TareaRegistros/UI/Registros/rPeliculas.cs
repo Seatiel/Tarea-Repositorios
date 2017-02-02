@@ -46,6 +46,14 @@ namespace TareaRegistros.UI.Registros
             return peliculas;
         }
 
+        private void LlenarCampos(Peliculas pelicula)
+        {            
+            EstrenostextBox.Text = pelicula.Estrenos;
+            DescripciontextBox.Text = pelicula.Descripcion;            
+            FechadateTimePicker.Value = pelicula.Fecha;
+            CategoriascomboBox.SelectedValue = pelicula.Categorias;
+        }
+
         public void Limpiar()
         {
             PeliculasIdtextBox.Clear();
@@ -114,14 +122,17 @@ namespace TareaRegistros.UI.Registros
             var pelicula = PeliculasBLL.Buscar(id);
             if (pelicula != null)
             {
-                EstrenostextBox.Text = pelicula.Estrenos;
-                DescripciontextBox.Text = pelicula.Descripcion;
-                //FechadateTimePicker.MaxDate = pelicula.Fecha;             
+                LlenarCampos(pelicula);             
             }
             else
             {
                 MessageBox.Show("La pelicula no esta creada");
             }
+        }
+
+        private void Nuevobutton_Click(object sender, EventArgs e)
+        {
+            Limpiar();
         }
     }
 }

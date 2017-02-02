@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cUsuariodataGridView = new System.Windows.Forms.DataGridView();
             this.Buscarbutton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cUsuariodataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // cUsuariodataGridView
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 170);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(764, 225);
-            this.dataGridView1.TabIndex = 3;
+            this.cUsuariodataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.cUsuariodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cUsuariodataGridView.Location = new System.Drawing.Point(43, 170);
+            this.cUsuariodataGridView.Name = "cUsuariodataGridView";
+            this.cUsuariodataGridView.RowTemplate.Height = 24;
+            this.cUsuariodataGridView.Size = new System.Drawing.Size(764, 225);
+            this.cUsuariodataGridView.TabIndex = 3;
             // 
             // Buscarbutton
             // 
@@ -59,18 +59,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 494);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cUsuariodataGridView);
             this.Controls.Add(this.Buscarbutton);
             this.Name = "cUsuarios";
             this.Text = "Consulta Usuarios";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cUsuariodataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView cUsuariodataGridView;
         private System.Windows.Forms.Button Buscarbutton;
     }
 }

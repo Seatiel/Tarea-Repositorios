@@ -33,5 +33,17 @@ namespace TareaRegistros
             UI.Registros.rCategorias rc = new UI.Registros.rCategorias();
             rc.Show();
         }
+
+        private void consultaUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Consultas.cUsuarios cu = new UI.Consultas.cUsuarios();
+            cu.Show();
+        }
+
+        private void consultaCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Consultas.cCategorias cc = new UI.Consultas.cCategorias();
+            cc.Show();
+        }
     }
 }
