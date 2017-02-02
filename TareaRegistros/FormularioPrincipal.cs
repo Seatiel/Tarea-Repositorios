@@ -45,5 +45,11 @@ namespace TareaRegistros
             UI.Consultas.cCategorias cc = new UI.Consultas.cCategorias();
             cc.Show();
         }
+
+        private void consultaPeliculasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.Consultas.cPeliculas cp = new UI.Consultas.cPeliculas();
+            cp.Show();
+        }
     }
 }

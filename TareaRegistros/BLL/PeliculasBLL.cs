@@ -48,7 +48,7 @@ namespace TareaRegistros.BLL
                     throw;
                 }
                 return retorno;
-            } 
+            }
         }
 
         public static Peliculas Buscar(int id)
@@ -69,8 +69,48 @@ namespace TareaRegistros.BLL
             }
         }
 
-        
+        public static List<Peliculas> GetList()
+        {
+            List<Peliculas> lista = new List<Peliculas>();
+            using (var db = new RegistrosDb())
+            {
+                try
+                {
+                    if (db.Pelicula.ToList().Count > 0)
+                    {
+                        lista = db.Pelicula.ToList();
+                    }
+                    else
+                    {
+                        lista = null;
+                    }
+                }
+                catch (Exception)
+                {
 
+                    throw;
+                }
+                return lista;
+            }
+        }
+
+        public static List<Peliculas> GetListFecha(DateTime desde, DateTime hasta)
+        {
+            List<Peliculas> lista = new List<Peliculas>();
+            using (var db = new RegistrosDb())
+            {
+                try
+                {
+                    lista = db.Pelicula.Where(p => p.Fecha >= desde.Date && p.Fecha <= hasta).ToList();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                return lista;
+            }
+        }
 
     }
 }

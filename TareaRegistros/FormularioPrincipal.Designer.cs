@@ -105,6 +105,7 @@
             this.consultaPeliculasToolStripMenuItem.Name = "consultaPeliculasToolStripMenuItem";
             this.consultaPeliculasToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.consultaPeliculasToolStripMenuItem.Text = "Consulta Peliculas";
+            this.consultaPeliculasToolStripMenuItem.Click += new System.EventHandler(this.consultaPeliculasToolStripMenuItem_Click);
             // 
             // consultaCategoriasToolStripMenuItem
             // 

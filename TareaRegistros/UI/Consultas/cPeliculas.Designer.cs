@@ -34,6 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.Filtarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,12 +52,13 @@
             // 
             this.Buscarbutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarbutton.Location = new System.Drawing.Point(539, 99);
+            this.Buscarbutton.Location = new System.Drawing.Point(517, 43);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(84, 38);
             this.Buscarbutton.TabIndex = 4;
             this.Buscarbutton.Text = "Buscar";
             this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // label2
             // 
@@ -81,6 +83,7 @@
             // DesdedateTimePicker
             // 
             this.DesdedateTimePicker.AccessibleDescription = "";
+            this.DesdedateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DesdedateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DesdedateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -92,6 +95,7 @@
             // HastadateTimePicker
             // 
             this.HastadateTimePicker.AccessibleDescription = "";
+            this.HastadateTimePicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HastadateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.HastadateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -100,11 +104,24 @@
             this.HastadateTimePicker.Size = new System.Drawing.Size(115, 22);
             this.HastadateTimePicker.TabIndex = 13;
             // 
+            // Filtarbutton
+            // 
+            this.Filtarbutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.Filtarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Filtarbutton.Location = new System.Drawing.Point(517, 99);
+            this.Filtarbutton.Name = "Filtarbutton";
+            this.Filtarbutton.Size = new System.Drawing.Size(84, 38);
+            this.Filtarbutton.TabIndex = 14;
+            this.Filtarbutton.Text = "Filtrar";
+            this.Filtarbutton.UseVisualStyleBackColor = true;
+            this.Filtarbutton.Click += new System.EventHandler(this.Filtarbutton_Click);
+            // 
             // cPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 445);
+            this.Controls.Add(this.Filtarbutton);
             this.Controls.Add(this.HastadateTimePicker);
             this.Controls.Add(this.DesdedateTimePicker);
             this.Controls.Add(this.label3);
@@ -127,5 +144,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker DesdedateTimePicker;
         private System.Windows.Forms.DateTimePicker HastadateTimePicker;
+        private System.Windows.Forms.Button Filtarbutton;
     }
 }
