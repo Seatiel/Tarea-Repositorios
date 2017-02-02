@@ -83,16 +83,19 @@ namespace TareaRegistros.UI.Registros
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(CategoriaIdtextBox.Text);
-            var categoria = CategoriasBLL.Buscar(id);
-            if (categoria != null)
+            if (!string.IsNullOrEmpty(CategoriaIdtextBox.Text))
             {
-                CategoriatextBox.Text = categoria.Categoria;
-            }
-            else
-            {
-                MessageBox.Show("La categoria no esta creado");
-            }
+                int id = Convert.ToInt32(CategoriaIdtextBox.Text);
+                var categoria = CategoriasBLL.Buscar(id);
+                if (categoria != null)
+                {
+                    CategoriatextBox.Text = categoria.Categoria;
+                }
+                else
+                {
+                    MessageBox.Show("La categoria no esta creado");
+                }
+            }            
         }
 
 

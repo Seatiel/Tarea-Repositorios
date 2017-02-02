@@ -118,16 +118,19 @@ namespace TareaRegistros.UI.Registros
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(PeliculasIdtextBox.Text);
-            var pelicula = PeliculasBLL.Buscar(id);
-            if (pelicula != null)
+            if (!string.IsNullOrEmpty(PeliculasIdtextBox.Text))
             {
-                LlenarCampos(pelicula);             
-            }
-            else
-            {
-                MessageBox.Show("La pelicula no esta creada");
-            }
+                int id = Convert.ToInt32(PeliculasIdtextBox.Text);
+                var pelicula = PeliculasBLL.Buscar(id);
+                if (pelicula != null)
+                {
+                    LlenarCampos(pelicula);
+                }
+                else
+                {
+                    MessageBox.Show("La pelicula no esta creada");
+                }
+            }            
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)

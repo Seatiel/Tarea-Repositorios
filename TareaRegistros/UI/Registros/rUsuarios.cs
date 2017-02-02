@@ -102,16 +102,19 @@ namespace TareaRegistros.UI.Registros
 
         private void Buscarbutton_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(UsuarioIdtextBox.Text);
-            var usuario = UsuariosBLL.Buscar(id);
-            if (usuario != null)
+            if (!string.IsNullOrEmpty(UsuarioIdtextBox.Text))
             {
-                NombreUsuariostextBox.Text = usuario.NombreUsuario;
-            }
-            else
-            {
-                MessageBox.Show("El usuario no esta creado.");
-            }
+                int id = Convert.ToInt32(UsuarioIdtextBox.Text);
+                var usuario = UsuariosBLL.Buscar(id);
+                if (usuario != null)
+                {
+                    NombreUsuariostextBox.Text = usuario.NombreUsuario;
+                }
+                else
+                {
+                    MessageBox.Show("El usuario no esta creado.");
+                }
+            }            
         }
     }
 }
