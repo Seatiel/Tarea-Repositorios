@@ -55,13 +55,10 @@ namespace TareaRegistros.UI.Registros
         public bool Validar()
         {
             bool retorno = true;
-            if (string.IsNullOrEmpty(EstrenostextBox.Text))
+            if ((string.IsNullOrEmpty(EstrenostextBox.Text)) || (string.IsNullOrEmpty(DescripciontextBox.Text)))
             {
                 EstrenoserrorProvider.SetError(EstrenostextBox, "Debe de ingresar el Estreno.");
-                if (string.IsNullOrEmpty(DescripciontextBox.Text))
-                {
-                    DescripcionerrorProvider.SetError(DescripciontextBox, "Debe de ingresar una Descripcion.");
-                }
+                DescripcionerrorProvider.SetError(DescripciontextBox, "Debe de ingresar la Descripcion.");
                 retorno = false;
             }
             return retorno;

@@ -94,6 +94,42 @@ namespace TareaRegistros.BLL
             }
         }
 
+        public static List<Peliculas> GetListId(int peliculaId)
+        {
+            List<Peliculas> lista = new List<Peliculas>();
+            using (var db = new RegistrosDb())
+            {
+                try
+                {
+                    lista = db.Pelicula.Where(p => p.PeliculaId == peliculaId).ToList();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                return lista;
+            }          
+        }
+
+        public static List<Peliculas> GetListDescripcion(string descripcion)
+        {
+            List<Peliculas> lista = new List<Peliculas>();
+            using (var db = new RegistrosDb())
+            {
+                try
+                {
+                    lista = db.Pelicula.Where(p => p.Descripcion == descripcion).ToList();
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+                return lista;
+            }
+        }
+
         public static List<Peliculas> GetListFecha(DateTime desde, DateTime hasta)
         {
             List<Peliculas> lista = new List<Peliculas>();
@@ -111,6 +147,8 @@ namespace TareaRegistros.BLL
                 return lista;
             }
         }
+
+        
 
     }
 }

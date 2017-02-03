@@ -54,13 +54,13 @@
             this.CategoriascomboBox.FormattingEnabled = true;
             this.CategoriascomboBox.Location = new System.Drawing.Point(206, 252);
             this.CategoriascomboBox.Name = "CategoriascomboBox";
-            this.CategoriascomboBox.Size = new System.Drawing.Size(192, 28);
+            this.CategoriascomboBox.Size = new System.Drawing.Size(293, 28);
             this.CategoriascomboBox.TabIndex = 3;
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarbutton.Location = new System.Drawing.Point(406, 97);
+            this.Buscarbutton.Location = new System.Drawing.Point(504, 94);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(91, 36);
             this.Buscarbutton.TabIndex = 7;
@@ -71,7 +71,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eliminarbutton.Location = new System.Drawing.Point(406, 332);
+            this.Eliminarbutton.Location = new System.Drawing.Point(504, 332);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(91, 36);
             this.Eliminarbutton.TabIndex = 6;
@@ -82,7 +82,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Guardarbutton.Location = new System.Drawing.Point(282, 332);
+            this.Guardarbutton.Location = new System.Drawing.Point(331, 332);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(91, 36);
             this.Guardarbutton.TabIndex = 5;
@@ -106,7 +106,7 @@
             this.EstrenostextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EstrenostextBox.Location = new System.Drawing.Point(206, 163);
             this.EstrenostextBox.Name = "EstrenostextBox";
-            this.EstrenostextBox.Size = new System.Drawing.Size(192, 27);
+            this.EstrenostextBox.Size = new System.Drawing.Size(293, 27);
             this.EstrenostextBox.TabIndex = 1;
             // 
             // DescripciontextBox
@@ -114,7 +114,7 @@
             this.DescripciontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DescripciontextBox.Location = new System.Drawing.Point(206, 210);
             this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(192, 27);
+            this.DescripciontextBox.Size = new System.Drawing.Size(293, 27);
             this.DescripciontextBox.TabIndex = 2;
             // 
             // PeliculasIdtextBox
@@ -179,7 +179,7 @@
             this.FechadateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(382, 27);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(480, 27);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
             this.FechadateTimePicker.Size = new System.Drawing.Size(115, 22);
             this.FechadateTimePicker.TabIndex = 8;
@@ -188,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 440);
+            this.ClientSize = new System.Drawing.Size(685, 440);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.CategoriascomboBox);
             this.Controls.Add(this.Buscarbutton);

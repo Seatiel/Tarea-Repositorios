@@ -12,6 +12,6 @@ namespace TareaRegistros
             int numero;
             int.TryParse(texto, out numero);
             return numero;
-        }
+        }        
     }
 }

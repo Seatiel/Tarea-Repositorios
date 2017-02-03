@@ -28,14 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PeliculasdataGridView = new System.Windows.Forms.DataGridView();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.Filtarbutton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.FiltrartextBox = new System.Windows.Forms.TextBox();
+            this.FiltrarcomboBox = new System.Windows.Forms.ComboBox();
+            this.BuscarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.FiltarFechabutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // PeliculasdataGridView
@@ -45,14 +51,14 @@
             this.PeliculasdataGridView.Location = new System.Drawing.Point(85, 175);
             this.PeliculasdataGridView.Name = "PeliculasdataGridView";
             this.PeliculasdataGridView.RowTemplate.Height = 24;
-            this.PeliculasdataGridView.Size = new System.Drawing.Size(684, 225);
+            this.PeliculasdataGridView.Size = new System.Drawing.Size(836, 225);
             this.PeliculasdataGridView.TabIndex = 5;
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarbutton.Location = new System.Drawing.Point(517, 43);
+            this.Buscarbutton.Location = new System.Drawing.Point(814, 53);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(84, 38);
             this.Buscarbutton.TabIndex = 4;
@@ -64,7 +70,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(107, 117);
+            this.label2.Location = new System.Drawing.Point(116, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 10;
@@ -74,7 +80,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(309, 117);
+            this.label3.Location = new System.Drawing.Point(318, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 20);
             this.label3.TabIndex = 11;
@@ -87,7 +93,7 @@
             this.DesdedateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DesdedateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.DesdedateTimePicker.Location = new System.Drawing.Point(176, 115);
+            this.DesdedateTimePicker.Location = new System.Drawing.Point(185, 131);
             this.DesdedateTimePicker.Name = "DesdedateTimePicker";
             this.DesdedateTimePicker.Size = new System.Drawing.Size(115, 22);
             this.DesdedateTimePicker.TabIndex = 12;
@@ -99,29 +105,63 @@
             this.HastadateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.HastadateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.HastadateTimePicker.Location = new System.Drawing.Point(374, 115);
+            this.HastadateTimePicker.Location = new System.Drawing.Point(383, 131);
             this.HastadateTimePicker.Name = "HastadateTimePicker";
             this.HastadateTimePicker.Size = new System.Drawing.Size(115, 22);
             this.HastadateTimePicker.TabIndex = 13;
             // 
-            // Filtarbutton
+            // label1
             // 
-            this.Filtarbutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Filtarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Filtarbutton.Location = new System.Drawing.Point(517, 99);
-            this.Filtarbutton.Name = "Filtarbutton";
-            this.Filtarbutton.Size = new System.Drawing.Size(84, 38);
-            this.Filtarbutton.TabIndex = 14;
-            this.Filtarbutton.Text = "Filtrar";
-            this.Filtarbutton.UseVisualStyleBackColor = true;
-            this.Filtarbutton.Click += new System.EventHandler(this.Filtarbutton_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(116, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 20);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Filtar:";
+            // 
+            // FiltrartextBox
+            // 
+            this.FiltrartextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FiltrartextBox.Location = new System.Drawing.Point(431, 59);
+            this.FiltrartextBox.Name = "FiltrartextBox";
+            this.FiltrartextBox.Size = new System.Drawing.Size(366, 27);
+            this.FiltrartextBox.TabIndex = 16;
+            // 
+            // FiltrarcomboBox
+            // 
+            this.FiltrarcomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FiltrarcomboBox.FormattingEnabled = true;
+            this.FiltrarcomboBox.Location = new System.Drawing.Point(185, 58);
+            this.FiltrarcomboBox.Name = "FiltrarcomboBox";
+            this.FiltrarcomboBox.Size = new System.Drawing.Size(226, 28);
+            this.FiltrarcomboBox.TabIndex = 17;
+            // 
+            // BuscarerrorProvider
+            // 
+            this.BuscarerrorProvider.ContainerControl = this;
+            // 
+            // FiltarFechabutton
+            // 
+            this.FiltarFechabutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.FiltarFechabutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FiltarFechabutton.Location = new System.Drawing.Point(764, 115);
+            this.FiltarFechabutton.Name = "FiltarFechabutton";
+            this.FiltarFechabutton.Size = new System.Drawing.Size(134, 38);
+            this.FiltarFechabutton.TabIndex = 18;
+            this.FiltarFechabutton.Text = "Filtar Fecha";
+            this.FiltarFechabutton.UseVisualStyleBackColor = true;
+            this.FiltarFechabutton.Click += new System.EventHandler(this.button1_Click);
             // 
             // cPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 445);
-            this.Controls.Add(this.Filtarbutton);
+            this.ClientSize = new System.Drawing.Size(996, 445);
+            this.Controls.Add(this.FiltarFechabutton);
+            this.Controls.Add(this.FiltrarcomboBox);
+            this.Controls.Add(this.FiltrartextBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.HastadateTimePicker);
             this.Controls.Add(this.DesdedateTimePicker);
             this.Controls.Add(this.label3);
@@ -130,7 +170,9 @@
             this.Controls.Add(this.Buscarbutton);
             this.Name = "cPeliculas";
             this.Text = "cPeliculas";
+            this.Load += new System.EventHandler(this.cPeliculas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PeliculasdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,6 +186,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker DesdedateTimePicker;
         private System.Windows.Forms.DateTimePicker HastadateTimePicker;
-        private System.Windows.Forms.Button Filtarbutton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox FiltrartextBox;
+        private System.Windows.Forms.ComboBox FiltrarcomboBox;
+        private System.Windows.Forms.ErrorProvider BuscarerrorProvider;
+        private System.Windows.Forms.Button FiltarFechabutton;
     }
 }
