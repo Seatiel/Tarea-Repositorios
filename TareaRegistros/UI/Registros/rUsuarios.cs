@@ -56,15 +56,7 @@ namespace TareaRegistros.UI.Registros
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
             Limpiar();
-        }
-
-        public static int ToInt(string texto)
-        {
-            int numero;
-            int.TryParse(texto, out numero);
-
-            return numero;
-        }
+        }        
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
@@ -91,7 +83,7 @@ namespace TareaRegistros.UI.Registros
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            var usuario = UsuariosBLL.Buscar(ToInt(UsuarioIdtextBox.Text));
+            var usuario = UsuariosBLL.Buscar(Utilitarios.ToInt(UsuarioIdtextBox.Text));
             if (usuario != null)
             {
                 if (UsuariosBLL.Eliminar(usuario))

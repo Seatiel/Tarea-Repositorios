@@ -50,25 +50,6 @@ namespace TareaRegistros.BLL
             }
         }
 
-        //public static void Eliminar(int id)
-        //{
-        //    var usuario = new Usuarios();
-        //    using (var db = new RegistrosDb())
-        //    {
-        //        try
-        //        {
-        //            usuario = db.Usuario.Find(id);
-        //            db.Usuario.Remove(usuario);
-        //            db.SaveChanges();
-        //        }
-        //        catch (Exception)
-        //        {
-
-        //            throw;
-        //        }
-        //    }
-        //}
-
         public static Usuarios Buscar(int id)
         {
             var usuario = new Usuarios();

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using TareaRegistros.BLL;
+using TareaRegistros.DAL;
 using TareaRegistros.Entidades;
 
 namespace TareaRegistros.UI.Registros
@@ -18,40 +19,28 @@ namespace TareaRegistros.UI.Registros
             InitializeComponent();
         }
 
-        public void LlenarCombo()
+        private void LlenarCombo()
         {
+            var  db = new RegistrosDb();
             var lista = CategoriasBLL.GetList();
-            if (lista.Count <= 0)
+            if (lista.Count >= 0)
             {
-                var categoria = new Categorias("Accion");
-                var categoria1 = new Categorias("Terror");
-                var categoria2 = new Categorias("Comedia");
-
-                CategoriasBLL.Guardar(categoria);
-                CategoriasBLL.Guardar(categoria1);
-                CategoriasBLL.Guardar(categoria2);
+                CategoriascomboBox.DataSource = lista;
+                CategoriascomboBox.DisplayMember = "Categoria";
+                CategoriascomboBox.ValueMember = "CategoriaId";
+                               
             }
-            CategoriascomboBox.DataSource = lista;
-            CategoriascomboBox.ValueMember = "CategoriaId";
-            CategoriascomboBox.DisplayMember = "Categoria";
         }
 
         private Peliculas LlenarCampos()
         {
+            string categorias = CategoriascomboBox.SelectedValue.ToString();
             var peliculas = new Peliculas();
             peliculas.Estrenos = EstrenostextBox.Text;
-            peliculas.Descripcion = DescripciontextBox.Text;
-            peliculas.Categorias = CategoriascomboBox.Text;
+            peliculas.Descripcion = DescripciontextBox.Text;            
             peliculas.Fecha = FechadateTimePicker.Value;
+            peliculas.CategoriaId = Utilitarios.ToInt(categorias);
             return peliculas;
-        }
-
-        private void LlenarCampos(Peliculas pelicula)
-        {            
-            EstrenostextBox.Text = pelicula.Estrenos;
-            DescripciontextBox.Text = pelicula.Descripcion;            
-            FechadateTimePicker.Value = pelicula.Fecha;
-            CategoriascomboBox.Text = pelicula.Categorias;            
         }
 
         public void Limpiar()
@@ -60,15 +49,8 @@ namespace TareaRegistros.UI.Registros
             EstrenostextBox.Clear();
             DescripciontextBox.Clear();
             FechadateTimePicker.Value = DateTime.Today;
-            CategoriascomboBox.SelectedIndex = 0;            
-        }
-
-        public static int ToInt(string texto)
-        {
-            int numero;
-            int.TryParse(texto, out numero);
-            return numero;
-        }
+                                  
+        }        
 
         public bool Validar()
         {
@@ -87,13 +69,13 @@ namespace TareaRegistros.UI.Registros
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            var pelicula = new Peliculas();
+            Peliculas pelicula = null;            
             pelicula = LlenarCampos();
             if (!Validar())
             {
                 MessageBox.Show("Debe de completar los campos");
             }
-            else if(PeliculasBLL.Guardar(pelicula))
+            else if (PeliculasBLL.Guardar(pelicula))
             {
                 MessageBox.Show("La pelicula se ha Guardado.");
             }
@@ -107,7 +89,7 @@ namespace TareaRegistros.UI.Registros
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            var pelicula = PeliculasBLL.Buscar(ToInt(PeliculasIdtextBox.Text));
+            var pelicula = PeliculasBLL.Buscar(Utilitarios.ToInt(PeliculasIdtextBox.Text));
             if (pelicula != null)
             {
                 if (PeliculasBLL.Eliminar(pelicula))
@@ -120,11 +102,13 @@ namespace TareaRegistros.UI.Registros
         {
             if (!string.IsNullOrEmpty(PeliculasIdtextBox.Text))
             {
-                int id = Convert.ToInt32(PeliculasIdtextBox.Text);
-                var pelicula = PeliculasBLL.Buscar(id);
+                var pelicula = PeliculasBLL.Buscar(Utilitarios.ToInt(PeliculasIdtextBox.Text));
                 if (pelicula != null)
                 {
-                    LlenarCampos(pelicula);
+                    EstrenostextBox.Text = pelicula.Estrenos;
+                    DescripciontextBox.Text = pelicula.Descripcion;
+                    FechadateTimePicker.Value = pelicula.Fecha;
+                    CategoriascomboBox.SelectedValue = pelicula.CategoriaId;
                 }
                 else
                 {

@@ -72,14 +72,7 @@ namespace TareaRegistros.BLL
             {
                 try
                 {
-                    if (db.Categoria.ToList().Count > 0)
-                    {
-                        lista = db.Categoria.ToList();
-                    }
-                    else
-                    {
-                        lista = null;
-                    }
+                    lista = db.Categoria.ToList();
                 }
                 catch (Exception)
                 {

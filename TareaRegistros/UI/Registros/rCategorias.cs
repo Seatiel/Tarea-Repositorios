@@ -16,15 +16,7 @@ namespace TareaRegistros.UI.Registros
         public rCategorias()
         {
             InitializeComponent();
-        }
-
-        public static int ToInt(string texto)
-        {
-            int numero;
-            int.TryParse(texto, out numero);
-
-            return numero;
-        }
+        }        
 
         private Categorias LlenarCampos()
         {
@@ -72,7 +64,7 @@ namespace TareaRegistros.UI.Registros
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
-            var categoria = CategoriasBLL.Buscar(ToInt(CategoriaIdtextBox.Text));
+            var categoria = CategoriasBLL.Buscar(Utilitarios.ToInt(CategoriaIdtextBox.Text));
             if (categoria != null)
             {
                 if (CategoriasBLL.Eliminar(categoria))
