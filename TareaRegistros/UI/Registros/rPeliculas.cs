@@ -21,7 +21,7 @@ namespace TareaRegistros.UI.Registros
 
         private void LlenarCombo()
         {
-            var  db = new RegistrosDb();
+            var  db = new MoviesDb();
             var lista = CategoriasBLL.GetList();
             if (lista.Count >= 0)
             {

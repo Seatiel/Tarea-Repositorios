@@ -13,7 +13,7 @@ namespace TareaRegistros.BLL
         public static bool Guardar(Usuarios usuario)
         {
             bool retorno = false;
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {
@@ -34,7 +34,7 @@ namespace TareaRegistros.BLL
         public static bool Eliminar(Usuarios usuario)
         {
             bool retorno = false;
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {                    
@@ -53,7 +53,7 @@ namespace TareaRegistros.BLL
         public static Usuarios Buscar(int id)
         {
             var usuario = new Usuarios();
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {
@@ -71,7 +71,7 @@ namespace TareaRegistros.BLL
         public static List<Usuarios> GetList()
         {
             List<Usuarios> lista = new List<Usuarios>();
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {

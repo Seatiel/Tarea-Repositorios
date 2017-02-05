@@ -75,7 +75,7 @@
     <Compile Include="BLL\CategoriasBLL.cs" />
     <Compile Include="BLL\PeliculasBLL.cs" />
     <Compile Include="BLL\UsuariosBLL.cs" />
-    <Compile Include="DAL\RegistrosDb.cs" />
+    <Compile Include="DAL\MoviesDb.cs" />
     <Compile Include="Entidades\Categorias.cs" />
     <Compile Include="Entidades\Peliculas.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
@@ -211,12 +211,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\RegistrosDb.mdf">
+    <Content Include="Database\MoviesDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Database\RegistrosDb_log.ldf">
+    <Content Include="Database\MoviesDb_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>RegistrosDb.mdf</DependentUpon>
+      <DependentUpon>MoviesDb.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
