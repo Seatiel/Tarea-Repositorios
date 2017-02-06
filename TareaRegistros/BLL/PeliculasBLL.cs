@@ -14,7 +14,7 @@ namespace TareaRegistros.BLL
         public static bool Guardar(Peliculas pelicula)
         {
             bool retorno = false;
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {
@@ -34,7 +34,7 @@ namespace TareaRegistros.BLL
         public static bool Eliminar(Peliculas pelicula)
         {
             bool retorno = false;
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {
@@ -54,7 +54,7 @@ namespace TareaRegistros.BLL
         public static Peliculas Buscar(int id)
         {
             var pelicula = new Peliculas();
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {
@@ -72,7 +72,7 @@ namespace TareaRegistros.BLL
         public static List<Peliculas> GetList()
         {
             List<Peliculas> lista = new List<Peliculas>();
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {
@@ -97,7 +97,7 @@ namespace TareaRegistros.BLL
         public static List<Peliculas> GetListId(int peliculaId)
         {
             List<Peliculas> lista = new List<Peliculas>();
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {
@@ -115,7 +115,7 @@ namespace TareaRegistros.BLL
         public static List<Peliculas> GetListDescripcion(string descripcion)
         {
             List<Peliculas> lista = new List<Peliculas>();
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {
@@ -133,7 +133,7 @@ namespace TareaRegistros.BLL
         public static List<Peliculas> GetListFecha(DateTime desde, DateTime hasta)
         {
             List<Peliculas> lista = new List<Peliculas>();
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {

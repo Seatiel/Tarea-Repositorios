@@ -43,7 +43,7 @@ namespace TareaRegistros.BLL
         public static bool Eliminar(Categorias categoria)
         {
             bool retorno = false;
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {
@@ -62,7 +62,7 @@ namespace TareaRegistros.BLL
         public static Categorias Buscar(int id)
         {
             var categoria = new Categorias();
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {
@@ -79,7 +79,7 @@ namespace TareaRegistros.BLL
         public static List<Categorias> GetList()
         {
             List<Categorias> lista = new List<Categorias>();
-            using (var db = new RegistrosDb())
+            using (var db = new MoviesDb())
             {
                 try
                 {
