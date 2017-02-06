@@ -75,7 +75,9 @@
     <Compile Include="BLL\CategoriasBLL.cs" />
     <Compile Include="BLL\PeliculasBLL.cs" />
     <Compile Include="BLL\UsuariosBLL.cs" />
+    <Compile Include="DAL\IRepository.cs" />
     <Compile Include="DAL\RegistrosDb.cs" />
+    <Compile Include="DAL\Repositorio.cs" />
     <Compile Include="Entidades\Categorias.cs" />
     <Compile Include="Entidades\Peliculas.cs" />
     <Compile Include="Entidades\Usuarios.cs" />

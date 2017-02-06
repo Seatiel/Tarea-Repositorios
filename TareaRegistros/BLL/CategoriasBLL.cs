@@ -12,21 +12,32 @@ namespace TareaRegistros.BLL
     {
         public static bool Guardar(Categorias categoria)
         {
+            //todo: es mejor retornar el mismo objeto guardado.
             bool retorno = false;
-            using (var db = new RegistrosDb())
+            using (var repositorio = new Repositorio<Categorias>())
             {
-                try
-                {
-                    db.Categoria.Add(categoria);
-                    db.SaveChanges();
-                    retorno = true;
-                }
-                catch (Exception)
-                {
-                    throw;
-                }
-                return retorno;
+                //todo: validar que el nombre de categoria no exista
+
+               retorno= repositorio.Guardar(categoria)!=null;
             }
+
+            return retorno;
+
+        //    bool retorno = false;
+        //    using (var db = new RegistrosDb())
+        //    {
+        //        try
+        //        {
+        //            db.Categoria.Add(categoria);
+        //            db.SaveChanges();
+        //            retorno = true;
+        //        }
+        //        catch (Exception)
+        //        {
+        //            throw;
+        //        }
+        //        return retorno;
+        //    }
         }
 
         public static bool Eliminar(Categorias categoria)
