@@ -9,10 +9,10 @@ namespace TareaRegistros.DAL
 {
     public class Repositorio<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        RegistrosDb Contex = null;
+        MoviesDb Contex = null;
         public Repositorio()
         {
-            Contex = new RegistrosDb();
+            Contex = new MoviesDb();
         }
 
         //propiedad que nos permite acceder al entityset actual con el que se instancion el repositorio

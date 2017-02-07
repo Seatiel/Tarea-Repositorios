@@ -16,7 +16,7 @@ namespace TareaRegistros.UI.Registros
         public rCategorias()
         {
             InitializeComponent();
-        }        
+        }
 
         private Categorias LlenarCampos()
         {
@@ -50,27 +50,38 @@ namespace TareaRegistros.UI.Registros
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
             var categoria = new Categorias();
+
             categoria = LlenarCampos();
             if (!Validar())
             {
                 MessageBox.Show("Debe de completar los Campos.");
+                return;
             }
             else if (CategoriasBLL.Guardar(categoria))
-            {                
+            {
                 MessageBox.Show("Se ha guardado la Categoria.");
+                Limpiar();
             }
-            Limpiar();                               
+
+
+            // Verificar si el id existë?
+            //Modificamos
+            //else
+            //Insertamos
+
+
         }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
             var categoria = CategoriasBLL.Buscar(Utilitarios.ToInt(CategoriaIdtextBox.Text));
-            if (categoria != null)
+
+            if (categoria != null && CategoriasBLL.Eliminar(categoria))
             {
-                if (CategoriasBLL.Eliminar(categoria))
-                    MessageBox.Show("La categoria ha sido eliminada");
+                MessageBox.Show("La categoria ha sido eliminada");
+
+                Limpiar();
             }
-            Limpiar();
         }
 
         private void Buscarbutton_Click(object sender, EventArgs e)
@@ -87,9 +98,10 @@ namespace TareaRegistros.UI.Registros
                 {
                     MessageBox.Show("La categoria no esta creado");
                 }
-            }            
+            }
         }
-
-
+       
+       
+       
     }
 }
