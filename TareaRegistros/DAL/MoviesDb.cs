@@ -7,12 +7,13 @@ using TareaRegistros.Entidades;
 
 namespace TareaRegistros.DAL
 {
-    public class MoviesDb : DbContext 
+    public class MoviesDb : DbContext
     {
-        public MoviesDb() : base ("ConStr")
+        public MoviesDb() : base("ConStr")
         {
 
         }
+
         public DbSet<Usuarios> Usuario { get; set; }
         public DbSet<Peliculas> Pelicula { get; set; }
         public DbSet<Categorias> Categoria { get; set; }
