@@ -82,7 +82,10 @@ namespace TareaRegistros.UI.Consultas
         {
             if (DesdedateTimePicker.Value.Date < HastadateTimePicker.Value.Date)
             {
-                PeliculasdataGridView.DataSource = PeliculasBLL.GetListFecha(DesdedateTimePicker.Value.Date, HastadateTimePicker.Value.Date);
+                PeliculasdataGridView.DataSource = 
+                    PeliculasBLL.GetListFecha(
+                        DesdedateTimePicker.Value.Date,
+                    HastadateTimePicker.Value.Date);
             }
         }
     }

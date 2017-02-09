@@ -19,17 +19,20 @@ namespace TareaRegistros.UI.Registros
             InitializeComponent();
         }
 
+
+        private void rPeliculas_Load(object sender, EventArgs e)
+        {
+            LlenarCombo();
+        }
+
         private void LlenarCombo()
         {
-            var  db = new MoviesDb();
-            var lista = CategoriasBLL.GetList();
-            if (lista.Count >= 0)
-            {
-                CategoriascomboBox.DataSource = lista;
-                CategoriascomboBox.DisplayMember = "Categoria";
-                CategoriascomboBox.ValueMember = "CategoriaId";
-                               
-            }
+            var db = new MoviesDb();
+            List<Categorias> lista = CategoriasBLL.GetList();
+
+            CategoriascomboBox.DataSource = lista;
+            CategoriascomboBox.DisplayMember = "Categoria";
+            CategoriascomboBox.ValueMember = "CategoriaId";
         }
 
         private Peliculas LlenarCampos()
@@ -37,7 +40,7 @@ namespace TareaRegistros.UI.Registros
             string categorias = CategoriascomboBox.SelectedValue.ToString();
             var peliculas = new Peliculas();
             peliculas.Estrenos = EstrenostextBox.Text;
-            peliculas.Descripcion = DescripciontextBox.Text;            
+            peliculas.Descripcion = DescripciontextBox.Text;
             peliculas.Fecha = FechadateTimePicker.Value;
             peliculas.CategoriaId = Utilitarios.ToInt(categorias);
             return peliculas;
@@ -49,8 +52,8 @@ namespace TareaRegistros.UI.Registros
             EstrenostextBox.Clear();
             DescripciontextBox.Clear();
             FechadateTimePicker.Value = DateTime.Today;
-                                  
-        }        
+
+        }
 
         public bool Validar()
         {
@@ -66,7 +69,7 @@ namespace TareaRegistros.UI.Registros
 
         private void Guardarbutton_Click(object sender, EventArgs e)
         {
-            Peliculas pelicula = null;            
+            Peliculas pelicula = null;
             pelicula = LlenarCampos();
             if (!Validar())
             {
@@ -79,10 +82,6 @@ namespace TareaRegistros.UI.Registros
             Limpiar();
         }
 
-        private void rPeliculas_Load(object sender, EventArgs e)
-        {
-            LlenarCombo();
-        }
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
@@ -111,7 +110,7 @@ namespace TareaRegistros.UI.Registros
                 {
                     MessageBox.Show("La pelicula no esta creada");
                 }
-            }            
+            }
         }
 
         private void Nuevobutton_Click(object sender, EventArgs e)
