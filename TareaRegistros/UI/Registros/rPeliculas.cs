@@ -14,9 +14,11 @@ namespace TareaRegistros.UI.Registros
 {
     public partial class rPeliculas : Form
     {
+        Entidades.Peliculas pelicula;
         public rPeliculas()
         {
             InitializeComponent();
+            Limpiar();
         }
 
 
@@ -38,22 +40,31 @@ namespace TareaRegistros.UI.Registros
         private Peliculas LlenarCampos()
         {
             string categorias = CategoriascomboBox.SelectedValue.ToString();
-            var peliculas = new Peliculas();
-            peliculas.Estrenos = EstrenostextBox.Text;
-            peliculas.Descripcion = DescripciontextBox.Text;
-            peliculas.Fecha = FechadateTimePicker.Value;
-            peliculas.CategoriaId = Utilitarios.ToInt(categorias);
-            return peliculas;
+           
+            pelicula.Estrenos = EstrenostextBox.Text;
+            pelicula.Descripcion = DescripciontextBox.Text;
+            pelicula.Fecha = FechadateTimePicker.Value;
+            pelicula.CategoriaId = Utilitarios.ToInt(categorias);
+            return pelicula;
+        }
+        private void LLenarGrid(Peliculas pelicula)
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = pelicula.Categorias;
         }
 
         public void Limpiar()
         {
+            pelicula = new Peliculas();
+
             PeliculasIdtextBox.Clear();
             EstrenostextBox.Clear();
             DescripciontextBox.Clear();
             FechadateTimePicker.Value = DateTime.Today;
 
+            dataGridView1.DataSource = null;
         }
+
 
         public bool Validar()
         {
@@ -68,8 +79,7 @@ namespace TareaRegistros.UI.Registros
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
-        {
-            Peliculas pelicula = null;
+        { 
             pelicula = LlenarCampos();
             if (!Validar())
             {
@@ -105,6 +115,9 @@ namespace TareaRegistros.UI.Registros
                     DescripciontextBox.Text = pelicula.Descripcion;
                     FechadateTimePicker.Value = pelicula.Fecha;
                     CategoriascomboBox.SelectedValue = pelicula.CategoriaId;
+
+                    LLenarGrid(pelicula);
+
                 }
                 else
                 {
@@ -113,9 +126,26 @@ namespace TareaRegistros.UI.Registros
             }
         }
 
+
+
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
+
             Limpiar();
+        }
+
+        private void AgregarButton_Click(object sender, EventArgs e)
+        {
+
+            Categorias categoria = new Categorias();
+
+            //BLL.CategoriasBLL.Buscar((int)CategoriascomboBox.SelectedValue)
+
+            categoria = (Categorias)CategoriascomboBox.SelectedItem;
+
+            pelicula.Categorias.Add(categoria);
+
+            LLenarGrid(pelicula);
         }
     }
 }

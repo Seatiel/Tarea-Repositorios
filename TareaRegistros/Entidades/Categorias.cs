@@ -11,10 +11,11 @@ namespace TareaRegistros.Entidades
         [Key]
         public int CategoriaId { get; set; }
         public string Categoria { get; set; }
+        public virtual  List<Peliculas> Peliculas { get; set; }
 
         public Categorias()
         {
-
+            this.Peliculas = new List<Entidades.Peliculas>();
         }
         public Categorias(string categoria)
         {

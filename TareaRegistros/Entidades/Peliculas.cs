@@ -15,9 +15,10 @@ namespace TareaRegistros.Entidades
         public DateTime Fecha { get; set; }
         public int CategoriaId { get; set; }
 
+        public virtual List<Categorias> Categorias { get; set; }
         public Peliculas()
         {
-
+            this.Categorias = new List<Entidades.Categorias>();
         }
 
         public Peliculas(int peliculaId, string estrenos, string descripcion, DateTime fecha, int categoriaId)
