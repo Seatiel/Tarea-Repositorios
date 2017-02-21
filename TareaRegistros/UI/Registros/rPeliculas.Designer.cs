@@ -188,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 440);
+            this.ClientSize = new System.Drawing.Size(666, 440);
             this.Controls.Add(this.FechadateTimePicker);
             this.Controls.Add(this.CategoriascomboBox);
             this.Controls.Add(this.Buscarbutton);
