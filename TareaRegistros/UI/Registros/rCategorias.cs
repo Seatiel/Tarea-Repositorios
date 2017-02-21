@@ -99,9 +99,7 @@ namespace TareaRegistros.UI.Registros
                     MessageBox.Show("La categoria no esta creado");
                 }
             }
-        }
-       
-       
+        }       
        
     }
 }

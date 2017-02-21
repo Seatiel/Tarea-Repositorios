@@ -31,6 +31,29 @@ namespace TareaRegistros.BLL
             }
         }
 
+        //public static bool Insertar(Peliculas pelicula)
+        //{
+        //    bool retorno = false;
+        //    try
+        //    {
+        //        using (var db = new MovieDb())
+        //        {
+        //            if (Buscar(pelicula.UsuarioId) == null)
+        //                db.Pelicula.Add(usuario);
+        //            else
+        //                db.Entry(pelicula).State = EntityState.Modified;
+
+        //            db.SaveChanges();
+        //        }
+        //        retorno = true;
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
+        //    return retorno;
+        //}
+
         public static bool Eliminar(Peliculas pelicula)
         {
             bool retorno = false;
@@ -50,6 +73,8 @@ namespace TareaRegistros.BLL
                 return retorno;
             }
         }
+
+
 
         public static Peliculas Buscar(int id)
         {
