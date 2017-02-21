@@ -18,7 +18,14 @@ namespace TareaRegistros.BLL
             {
                 try
                 {
-                    db.Pelicula.Add(pelicula);
+                   pelicula = db.Pelicula.Add(pelicula);
+
+                    foreach (var cat in pelicula.Categorias)
+                    {//para evitar que se inserten de nuevo los estudiantes agregados.
+                     //por defecto entity framwork lo ve como entidades nuevas. 
+                        db.Entry(cat).State = EntityState.Unchanged;
+                    }
+
                     db.SaveChanges();
                     retorno = true;
                 }
@@ -84,6 +91,7 @@ namespace TareaRegistros.BLL
                 try
                 {
                     pelicula = db.Pelicula.Find(id);
+                   pelicula.Categorias.Count();
                 }
                 catch (Exception ex)
                 {
