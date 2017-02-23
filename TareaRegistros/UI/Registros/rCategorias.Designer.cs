@@ -44,7 +44,7 @@
             // CategoriaIdtextBox
             // 
             this.CategoriaIdtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoriaIdtextBox.Location = new System.Drawing.Point(188, 99);
+            this.CategoriaIdtextBox.Location = new System.Drawing.Point(126, 23);
             this.CategoriaIdtextBox.Name = "CategoriaIdtextBox";
             this.CategoriaIdtextBox.Size = new System.Drawing.Size(63, 27);
             this.CategoriaIdtextBox.TabIndex = 0;
@@ -53,7 +53,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(74, 102);
+            this.label2.Location = new System.Drawing.Point(12, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 20);
             this.label2.TabIndex = 0;
@@ -62,7 +62,7 @@
             // Buscarbutton
             // 
             this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarbutton.Location = new System.Drawing.Point(409, 95);
+            this.Buscarbutton.Location = new System.Drawing.Point(205, 21);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(85, 31);
             this.Buscarbutton.TabIndex = 5;
@@ -73,7 +73,7 @@
             // Eliminarbutton
             // 
             this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eliminarbutton.Location = new System.Drawing.Point(409, 270);
+            this.Eliminarbutton.Location = new System.Drawing.Point(279, 133);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(94, 31);
             this.Eliminarbutton.TabIndex = 4;
@@ -84,7 +84,7 @@
             // Guardarbutton
             // 
             this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Guardarbutton.Location = new System.Drawing.Point(275, 270);
+            this.Guardarbutton.Location = new System.Drawing.Point(145, 133);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(94, 31);
             this.Guardarbutton.TabIndex = 3;
@@ -95,7 +95,7 @@
             // Nuevobutton
             // 
             this.Nuevobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nuevobutton.Location = new System.Drawing.Point(142, 270);
+            this.Nuevobutton.Location = new System.Drawing.Point(12, 133);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(94, 31);
             this.Nuevobutton.TabIndex = 2;
@@ -106,16 +106,16 @@
             // CategoriatextBox
             // 
             this.CategoriatextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CategoriatextBox.Location = new System.Drawing.Point(188, 150);
+            this.CategoriatextBox.Location = new System.Drawing.Point(126, 74);
             this.CategoriatextBox.Name = "CategoriatextBox";
-            this.CategoriatextBox.Size = new System.Drawing.Size(239, 27);
+            this.CategoriatextBox.Size = new System.Drawing.Size(247, 27);
             this.CategoriatextBox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(92, 157);
+            this.label1.Location = new System.Drawing.Point(12, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 1;
@@ -129,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(585, 396);
+            this.ClientSize = new System.Drawing.Size(400, 182);
             this.Controls.Add(this.CategoriaIdtextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Buscarbutton);

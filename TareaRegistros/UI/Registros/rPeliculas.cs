@@ -21,17 +21,14 @@ namespace TareaRegistros.UI.Registros
             Limpiar();
         }
 
-
         private void rPeliculas_Load(object sender, EventArgs e)
         {
             LlenarCombo();
         }
 
         private void LlenarCombo()
-        {
-            var db = new MoviesDb();
+        {            
             List<Categorias> lista = CategoriasBLL.GetList();
-
             CategoriascomboBox.DataSource = lista;
             CategoriascomboBox.DisplayMember = "Categoria";
             CategoriascomboBox.ValueMember = "CategoriaId";
@@ -47,6 +44,7 @@ namespace TareaRegistros.UI.Registros
             pelicula.CategoriaId = Utilitarios.ToInt(categorias);
             return pelicula;
         }
+
         private void LLenarGrid(Peliculas pelicula)
         {
             dataGridView1.DataSource = null;
@@ -64,7 +62,6 @@ namespace TareaRegistros.UI.Registros
 
             dataGridView1.DataSource = null;
         }
-
 
         public bool Validar()
         {
@@ -91,7 +88,6 @@ namespace TareaRegistros.UI.Registros
             }
             Limpiar();
         }
-
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
@@ -126,11 +122,8 @@ namespace TareaRegistros.UI.Registros
             }
         }
 
-
-
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
-
             Limpiar();
         }
 

@@ -16,3 +16,9 @@ UsuarioId int identity(1,1) primary key,
 NombreUsuario varchar(50),
 Clave varchar(50)
 );
+
+create table PeliculasCategorias(
+PeliculaCategoriaId int identity(1,1) primary key,
+PeliculaId int,
+CategoriaId int
+);
