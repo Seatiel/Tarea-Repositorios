@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rPeliculas));
             this.CategoriascomboBox = new System.Windows.Forms.ComboBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
@@ -60,21 +61,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CategoriascomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CategoriascomboBox.FormattingEnabled = true;
-            this.CategoriascomboBox.Location = new System.Drawing.Point(97, 20);
-            this.CategoriascomboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CategoriascomboBox.Location = new System.Drawing.Point(129, 25);
+            this.CategoriascomboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CategoriascomboBox.Name = "CategoriascomboBox";
-            this.CategoriascomboBox.Size = new System.Drawing.Size(301, 25);
+            this.CategoriascomboBox.Size = new System.Drawing.Size(398, 28);
             this.CategoriascomboBox.TabIndex = 3;
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarbutton.Location = new System.Drawing.Point(137, 13);
-            this.Buscarbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(192, 3);
+            this.Buscarbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(68, 29);
+            this.Buscarbutton.Size = new System.Drawing.Size(106, 40);
             this.Buscarbutton.TabIndex = 7;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
@@ -82,12 +86,15 @@
             // 
             this.Eliminarbutton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Eliminarbutton.Location = new System.Drawing.Point(340, 348);
-            this.Eliminarbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Eliminarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Eliminarbutton.Image")));
+            this.Eliminarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Eliminarbutton.Location = new System.Drawing.Point(464, 428);
+            this.Eliminarbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Eliminarbutton.Name = "Eliminarbutton";
-            this.Eliminarbutton.Size = new System.Drawing.Size(68, 29);
+            this.Eliminarbutton.Size = new System.Drawing.Size(114, 42);
             this.Eliminarbutton.TabIndex = 6;
             this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
@@ -95,12 +102,15 @@
             // 
             this.Guardarbutton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Guardarbutton.Location = new System.Drawing.Point(210, 348);
-            this.Guardarbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Guardarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Guardarbutton.Image")));
+            this.Guardarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Guardarbutton.Location = new System.Drawing.Point(289, 428);
+            this.Guardarbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Guardarbutton.Name = "Guardarbutton";
-            this.Guardarbutton.Size = new System.Drawing.Size(70, 29);
+            this.Guardarbutton.Size = new System.Drawing.Size(114, 42);
             this.Guardarbutton.TabIndex = 5;
             this.Guardarbutton.Text = "Guardar";
+            this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
@@ -108,12 +118,15 @@
             // 
             this.Nuevobutton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.Nuevobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nuevobutton.Location = new System.Drawing.Point(80, 348);
-            this.Nuevobutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Nuevobutton.Image = ((System.Drawing.Image)(resources.GetObject("Nuevobutton.Image")));
+            this.Nuevobutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Nuevobutton.Location = new System.Drawing.Point(114, 428);
+            this.Nuevobutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Nuevobutton.Name = "Nuevobutton";
-            this.Nuevobutton.Size = new System.Drawing.Size(68, 29);
+            this.Nuevobutton.Size = new System.Drawing.Size(114, 42);
             this.Nuevobutton.TabIndex = 4;
             this.Nuevobutton.Text = "Nuevo";
+            this.Nuevobutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Nuevobutton.UseVisualStyleBackColor = true;
             this.Nuevobutton.Click += new System.EventHandler(this.Nuevobutton_Click);
             // 
@@ -122,10 +135,10 @@
             this.EstrenostextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EstrenostextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EstrenostextBox.Location = new System.Drawing.Point(100, 49);
-            this.EstrenostextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EstrenostextBox.Location = new System.Drawing.Point(133, 60);
+            this.EstrenostextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EstrenostextBox.Name = "EstrenostextBox";
-            this.EstrenostextBox.Size = new System.Drawing.Size(387, 23);
+            this.EstrenostextBox.Size = new System.Drawing.Size(516, 27);
             this.EstrenostextBox.TabIndex = 1;
             // 
             // DescripciontextBox
@@ -133,29 +146,28 @@
             this.DescripciontextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DescripciontextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescripciontextBox.Location = new System.Drawing.Point(100, 88);
-            this.DescripciontextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DescripciontextBox.Location = new System.Drawing.Point(133, 108);
+            this.DescripciontextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DescripciontextBox.Name = "DescripciontextBox";
-            this.DescripciontextBox.Size = new System.Drawing.Size(387, 23);
+            this.DescripciontextBox.Size = new System.Drawing.Size(516, 27);
             this.DescripciontextBox.TabIndex = 2;
             // 
             // PeliculasIdtextBox
             // 
             this.PeliculasIdtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PeliculasIdtextBox.Location = new System.Drawing.Point(100, 16);
-            this.PeliculasIdtextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PeliculasIdtextBox.Location = new System.Drawing.Point(133, 16);
+            this.PeliculasIdtextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PeliculasIdtextBox.Name = "PeliculasIdtextBox";
-            this.PeliculasIdtextBox.Size = new System.Drawing.Size(33, 23);
+            this.PeliculasIdtextBox.Size = new System.Drawing.Size(43, 27);
             this.PeliculasIdtextBox.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(11, 26);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(15, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 17);
+            this.label4.Size = new System.Drawing.Size(95, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Categorias:";
             // 
@@ -163,10 +175,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 90);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(19, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 17);
+            this.label3.Size = new System.Drawing.Size(104, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Descripcion:";
             // 
@@ -174,10 +185,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 52);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(19, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
+            this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Estrenos:";
             // 
@@ -185,10 +195,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(19, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 17);
+            this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Peliculas Id:";
             // 
@@ -207,10 +216,10 @@
             this.FechadateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.FechadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.FechadateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.FechadateTimePicker.Location = new System.Drawing.Point(400, 17);
-            this.FechadateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FechadateTimePicker.Location = new System.Drawing.Point(534, 21);
+            this.FechadateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.FechadateTimePicker.Name = "FechadateTimePicker";
-            this.FechadateTimePicker.Size = new System.Drawing.Size(87, 20);
+            this.FechadateTimePicker.Size = new System.Drawing.Size(115, 22);
             this.FechadateTimePicker.TabIndex = 8;
             // 
             // label5
@@ -218,10 +227,9 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(345, 17);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(461, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 17);
+            this.label5.Size = new System.Drawing.Size(60, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "Fecha:";
             // 
@@ -234,10 +242,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 51);
+            this.dataGridView1.Location = new System.Drawing.Point(8, 63);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(459, 159);
+            this.dataGridView1.Size = new System.Drawing.Size(629, 196);
             this.dataGridView1.TabIndex = 10;
             // 
             // groupBox1
@@ -249,9 +258,11 @@
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.CategoriascomboBox);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(3, 116);
+            this.groupBox1.Location = new System.Drawing.Point(4, 143);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(485, 227);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(645, 279);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Categorias de  las Peliculas";
@@ -259,19 +270,24 @@
             // AgregarButton
             // 
             this.AgregarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AgregarButton.Location = new System.Drawing.Point(409, 20);
+            this.AgregarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgregarButton.Image = ((System.Drawing.Image)(resources.GetObject("AgregarButton.Image")));
+            this.AgregarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AgregarButton.Location = new System.Drawing.Point(538, 15);
+            this.AgregarButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.AgregarButton.Name = "AgregarButton";
-            this.AgregarButton.Size = new System.Drawing.Size(63, 23);
+            this.AgregarButton.Size = new System.Drawing.Size(99, 40);
             this.AgregarButton.TabIndex = 11;
             this.AgregarButton.Text = "Agregar";
+            this.AgregarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AgregarButton.UseVisualStyleBackColor = true;
             this.AgregarButton.Click += new System.EventHandler(this.AgregarButton_Click);
             // 
             // rPeliculas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 391);
+            this.ClientSize = new System.Drawing.Size(677, 481);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.FechadateTimePicker);
@@ -285,7 +301,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "rPeliculas";
             this.Text = "Registro de Peliculas";
             this.Load += new System.EventHandler(this.rPeliculas_Load);
