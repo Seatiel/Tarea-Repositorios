@@ -24,33 +24,45 @@ namespace TareaRegistros.UI.Registros
 
         private void rPeliculas_Load(object sender, EventArgs e)
         {
-            LlenarCombo();
+            LlenarCombos();
         }
 
-        private void LlenarCombo()
+        private void LlenarCombos()
         {
-            var db = new MoviesDb();
-            List<Categorias> lista = CategoriasBLL.GetList();
-
-            CategoriascomboBox.DataSource = lista;
+            CategoriascomboBox.DataSource = CategoriasBLL.GetList();
             CategoriascomboBox.DisplayMember = "Categoria";
             CategoriascomboBox.ValueMember = "CategoriaId";
+
+            UsuariocomboBox.DataSource = UsuariosBLL.GetList();
+            UsuariocomboBox.DisplayMember = "NombreUsuario";
+            UsuariocomboBox.ValueMember = "UsuarioId";
+
         }
 
         private Peliculas LlenarCampos()
         {
             string categorias = CategoriascomboBox.SelectedValue.ToString();
-           
+
             pelicula.Estrenos = EstrenostextBox.Text;
             pelicula.Descripcion = DescripciontextBox.Text;
             pelicula.Fecha = FechadateTimePicker.Value;
             pelicula.CategoriaId = Utilitarios.ToInt(categorias);
             return pelicula;
         }
-        private void LLenarGrid(Peliculas pelicula)
+        private void LLenarGrid(Peliculas pelicula, bool soloCategorias)
         {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = pelicula.Categorias;
+            //todo: optimizar este metodo ......
+            if (soloCategorias)
+            {
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = pelicula.Categorias;
+            }
+            else
+            {
+                dataGridView2.DataSource = null;
+                dataGridView2.DataSource = pelicula.Comentarios;
+            }
+
         }
 
         public void Limpiar()
@@ -63,6 +75,7 @@ namespace TareaRegistros.UI.Registros
             FechadateTimePicker.Value = DateTime.Today;
 
             dataGridView1.DataSource = null;
+            dataGridView2.DataSource = null;
         }
 
 
@@ -79,7 +92,7 @@ namespace TareaRegistros.UI.Registros
         }
 
         private void Guardarbutton_Click(object sender, EventArgs e)
-        { 
+        {
             pelicula = LlenarCampos();
             if (!Validar())
             {
@@ -116,7 +129,8 @@ namespace TareaRegistros.UI.Registros
                     FechadateTimePicker.Value = pelicula.Fecha;
                     CategoriascomboBox.SelectedValue = pelicula.CategoriaId;
 
-                    LLenarGrid(pelicula);
+                    LLenarGrid(pelicula, true);
+                    LLenarGrid(pelicula, false);
 
                 }
                 else
@@ -145,7 +159,19 @@ namespace TareaRegistros.UI.Registros
 
             pelicula.Categorias.Add(categoria);
 
-            LLenarGrid(pelicula);
+            LLenarGrid(pelicula, true);
+        }
+
+        private void AgregarComentariosbutton_Click(object sender, EventArgs e)
+        {
+            PeliculasComentarios review = new PeliculasComentarios();
+
+            review.Usuario = (Usuarios)UsuariocomboBox.SelectedItem;
+            review.Comentario = ComentariotextBox.Text;
+
+            pelicula.Comentarios.Add(review);
+
+            LLenarGrid(pelicula, false);
         }
     }
 }

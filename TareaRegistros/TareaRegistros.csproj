@@ -80,7 +80,9 @@
     <Compile Include="DAL\Repositorio.cs" />
     <Compile Include="Entidades\Categorias.cs" />
     <Compile Include="Entidades\Peliculas.cs" />
+    <Compile Include="Entidades\PeliculasComentarios.cs" />
     <Compile Include="Entidades\Usuarios.cs" />
+    <Compile Include="Entidades\Ventas.cs" />
     <Compile Include="FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>

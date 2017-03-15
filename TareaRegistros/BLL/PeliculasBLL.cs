@@ -26,6 +26,12 @@ namespace TareaRegistros.BLL
                         db.Entry(cat).State = EntityState.Unchanged;
                     }
 
+                    foreach (var coment in pelicula.Comentarios)
+                    {//para evitar que se inserten de nuevo los estudiantes agregados.
+                     //por defecto entity framwork lo ve como entidades nuevas. 
+                        db.Entry(coment).State = EntityState.Unchanged;
+                    }
+
                     db.SaveChanges();
                     retorno = true;
                 }
@@ -67,6 +73,7 @@ namespace TareaRegistros.BLL
                 {
                     pelicula = db.Pelicula.Find(id);
                    pelicula.Categorias.Count();
+                    pelicula.Comentarios.Count();
                 }
                 catch (Exception ex)
                 {

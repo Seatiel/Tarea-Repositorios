@@ -23,13 +23,26 @@ namespace TareaRegistros.DAL
             modelBuilder.Entity<Entidades.Categorias>()
                  .HasMany(categoria => categoria.Peliculas)
                  .WithMany(pelicula => pelicula.Categorias)
-                 .Map( peliculascategorias =>
-                 {
-                     peliculascategorias.MapLeftKey("PeliculaId");
-                     peliculascategorias.MapRightKey("CategoriaId");
-                     peliculascategorias.ToTable("PeliculasCategorias");
-                 }
+                 .Map(peliculascategorias =>
+                {
+                    peliculascategorias.MapLeftKey("PeliculaId");
+                    peliculascategorias.MapRightKey("CategoriaId");
+                    peliculascategorias.ToTable("PeliculasCategorias");
+                }
                 );
+
+            modelBuilder.Entity<PeliculasComentarios>().HasRequired(u => u.Usuario);
+               
+             //modelBuilder.Entity<Entidades.Ventas>()
+             //     .HasMany(venta => venta.VentasDetalle)
+             //     .WithMany(?????)
+             //     .Map(venta =>
+             //     {
+             //         venta.MapLeftKey("VentaId");
+             //         venta.MapRightKey("ArticuloId");
+             //         venta.ToTable("VentasDetalle");
+             //     }
+             //    );
         }
     }
 }

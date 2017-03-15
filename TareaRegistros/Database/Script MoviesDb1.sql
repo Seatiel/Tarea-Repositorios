@@ -1,1 +1,1 @@
-﻿
+﻿Create Table PeliculasComentarios(ComentarioId int primary key identity(1,1),PeliculaId int, Comentario varchar(100))
