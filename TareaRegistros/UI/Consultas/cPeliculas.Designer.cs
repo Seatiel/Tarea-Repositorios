@@ -48,17 +48,17 @@
             // 
             this.PeliculasdataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.PeliculasdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PeliculasdataGridView.Location = new System.Drawing.Point(85, 175);
+            this.PeliculasdataGridView.Location = new System.Drawing.Point(12, 142);
             this.PeliculasdataGridView.Name = "PeliculasdataGridView";
             this.PeliculasdataGridView.RowTemplate.Height = 24;
-            this.PeliculasdataGridView.Size = new System.Drawing.Size(836, 225);
+            this.PeliculasdataGridView.Size = new System.Drawing.Size(775, 255);
             this.PeliculasdataGridView.TabIndex = 5;
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Buscarbutton.Location = new System.Drawing.Point(814, 53);
+            this.Buscarbutton.Location = new System.Drawing.Point(703, 19);
             this.Buscarbutton.Name = "Buscarbutton";
             this.Buscarbutton.Size = new System.Drawing.Size(84, 38);
             this.Buscarbutton.TabIndex = 4;
@@ -70,7 +70,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(116, 133);
+            this.label2.Location = new System.Drawing.Point(23, 94);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 10;
@@ -80,7 +80,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(318, 133);
+            this.label3.Location = new System.Drawing.Point(225, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 20);
             this.label3.TabIndex = 11;
@@ -93,7 +93,7 @@
             this.DesdedateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DesdedateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.DesdedateTimePicker.Location = new System.Drawing.Point(185, 131);
+            this.DesdedateTimePicker.Location = new System.Drawing.Point(92, 92);
             this.DesdedateTimePicker.Name = "DesdedateTimePicker";
             this.DesdedateTimePicker.Size = new System.Drawing.Size(115, 22);
             this.DesdedateTimePicker.TabIndex = 12;
@@ -105,7 +105,7 @@
             this.HastadateTimePicker.CustomFormat = "yyyy/MM/dd";
             this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.HastadateTimePicker.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.HastadateTimePicker.Location = new System.Drawing.Point(383, 131);
+            this.HastadateTimePicker.Location = new System.Drawing.Point(290, 92);
             this.HastadateTimePicker.Name = "HastadateTimePicker";
             this.HastadateTimePicker.Size = new System.Drawing.Size(115, 22);
             this.HastadateTimePicker.TabIndex = 13;
@@ -114,7 +114,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(116, 66);
+            this.label1.Location = new System.Drawing.Point(23, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 15;
@@ -123,7 +123,7 @@
             // FiltrartextBox
             // 
             this.FiltrartextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FiltrartextBox.Location = new System.Drawing.Point(431, 59);
+            this.FiltrartextBox.Location = new System.Drawing.Point(331, 39);
             this.FiltrartextBox.Name = "FiltrartextBox";
             this.FiltrartextBox.Size = new System.Drawing.Size(366, 27);
             this.FiltrartextBox.TabIndex = 16;
@@ -132,7 +132,7 @@
             // 
             this.FiltrarcomboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FiltrarcomboBox.FormattingEnabled = true;
-            this.FiltrarcomboBox.Location = new System.Drawing.Point(185, 58);
+            this.FiltrarcomboBox.Location = new System.Drawing.Point(99, 38);
             this.FiltrarcomboBox.Name = "FiltrarcomboBox";
             this.FiltrarcomboBox.Size = new System.Drawing.Size(226, 28);
             this.FiltrarcomboBox.TabIndex = 17;
@@ -145,7 +145,7 @@
             // 
             this.FiltarFechabutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.FiltarFechabutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FiltarFechabutton.Location = new System.Drawing.Point(764, 115);
+            this.FiltarFechabutton.Location = new System.Drawing.Point(653, 76);
             this.FiltarFechabutton.Name = "FiltarFechabutton";
             this.FiltarFechabutton.Size = new System.Drawing.Size(134, 38);
             this.FiltarFechabutton.TabIndex = 18;
@@ -157,7 +157,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 445);
+            this.ClientSize = new System.Drawing.Size(799, 423);
             this.Controls.Add(this.FiltarFechabutton);
             this.Controls.Add(this.FiltrarcomboBox);
             this.Controls.Add(this.FiltrartextBox);

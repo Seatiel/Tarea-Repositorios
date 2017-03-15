@@ -21,7 +21,6 @@ namespace TareaRegistros.UI.Registros
             Limpiar();
         }
 
-
         private void rPeliculas_Load(object sender, EventArgs e)
         {
             LlenarCombos();
@@ -78,7 +77,6 @@ namespace TareaRegistros.UI.Registros
             dataGridView2.DataSource = null;
         }
 
-
         public bool Validar()
         {
             bool retorno = true;
@@ -104,7 +102,6 @@ namespace TareaRegistros.UI.Registros
             }
             Limpiar();
         }
-
 
         private void Eliminarbutton_Click(object sender, EventArgs e)
         {
@@ -140,11 +137,8 @@ namespace TareaRegistros.UI.Registros
             }
         }
 
-
-
         private void Nuevobutton_Click(object sender, EventArgs e)
         {
-
             Limpiar();
         }
 

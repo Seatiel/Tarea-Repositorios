@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(cUsuarios));
             this.cUsuariodataGridView = new System.Windows.Forms.DataGridView();
             this.Buscarbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cUsuariodataGridView)).BeginInit();
@@ -37,20 +38,23 @@
             // 
             this.cUsuariodataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cUsuariodataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cUsuariodataGridView.Location = new System.Drawing.Point(43, 105);
+            this.cUsuariodataGridView.Location = new System.Drawing.Point(12, 96);
             this.cUsuariodataGridView.Name = "cUsuariodataGridView";
             this.cUsuariodataGridView.RowTemplate.Height = 24;
-            this.cUsuariodataGridView.Size = new System.Drawing.Size(749, 225);
+            this.cUsuariodataGridView.Size = new System.Drawing.Size(685, 225);
             this.cUsuariodataGridView.TabIndex = 3;
             // 
             // Buscarbutton
             // 
             this.Buscarbutton.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.Buscarbutton.Location = new System.Drawing.Point(717, 35);
+            this.Buscarbutton.Image = ((System.Drawing.Image)(resources.GetObject("Buscarbutton.Image")));
+            this.Buscarbutton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Buscarbutton.Location = new System.Drawing.Point(595, 46);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(74, 37);
+            this.Buscarbutton.Size = new System.Drawing.Size(102, 44);
             this.Buscarbutton.TabIndex = 2;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
@@ -58,7 +62,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 365);
+            this.ClientSize = new System.Drawing.Size(709, 365);
             this.Controls.Add(this.cUsuariodataGridView);
             this.Controls.Add(this.Buscarbutton);
             this.Name = "cUsuarios";
